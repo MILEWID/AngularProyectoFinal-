@@ -1,0 +1,19 @@
+<div class="container-tareas d-flex flex-column  justify-content-center align-items-center">
+    <h1>Programa de gestion de tareas</h1>
+    <div class="agregar d-flex">
+        <div class="mb-3">
+            <label  class="form-label">Ingresar Tarea</label>
+            <input type="text" class="form-control"  >
+          </div>
+    </div>
+    <a href="/agregar" class="btn btn-primary " >Agregar</a>
+    <ul>
+        <li class="d-flex" *ngFor="let tarea of tareas |async">
+            <div class="form-check">
+                <input (change)="alerta()" class=" form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            <p   [ngClass]="{'subrayado': val === 1}">{{tarea.description}}</p>
+            <button class="btn btn-danger">Eliminar</button>
+        </li>
+    </ul>
+</div>

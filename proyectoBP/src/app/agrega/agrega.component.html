@@ -1,0 +1,12 @@
+<form>
+    <h2>Agregar Tarea</h2>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Descripcion</label>
+      <input type="text" [value]="tarea.description" >
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Estado</label>
+        <input type="text" [value]="tarea.status" >
+      </div> 
+    <button (click)="agregar" class="btn btn-primary">Agregar</button>
+  </form>
