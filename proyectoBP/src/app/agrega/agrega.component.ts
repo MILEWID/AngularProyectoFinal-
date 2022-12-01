@@ -22,5 +22,6 @@ export class AgregaComponent implements OnInit {
   agregar() {
     this.tsrv.create(this.tarea).subscribe(res => {
       console.log('Tarea creada')
-  }
+  });
+}
 }
